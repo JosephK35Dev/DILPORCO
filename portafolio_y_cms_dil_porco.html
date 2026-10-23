@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Metadatos Principales -->
+    <title id="meta-title">DIL PORCO | Chorizos mixtos y longaniza de cerdo en Cúcuta</title>
+    <meta id="meta-desc" name="description" content="DIL PORCO - Venta de chorizos mixtos y longaniza de cerdo de alta calidad en Cúcuta, Norte de Santander. Conoce nuestros productos y haz tu pedido por WhatsApp.">
+    <meta property="og:title" content="DIL PORCO | Chorizos mixtos y longaniza de cerdo en Cúcuta">
+    <meta property="og:description" content="Sabor y calidad en cada producto. Elaboración artesanal de embutidos en Cúcuta.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Google Fonts (Montserrat & Playfair Display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            darkRed: '#7A0909',
+                            red: '#A00C0C',
+                            brightRed: '#D32F2F',
+                            lightRed: '#FFEBEE',
+                            black: '#121212',
+                            darkGray: '#1E1E1E',
+                            cream: '#FDFBF7',
+                            warmBeige: '#F5EBE0',
+                            gold: '#D4AF37'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Personalizaciones CSS avanzadas */
+        .bg-pattern {
+            background-color: #121212;
+            background-image: radial-gradient(#262626 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(18,18,18,0.95) 0%, rgba(122,9,9,0.85) 50%, rgba(18,18,18,0.95) 100%);
+        }
+        .badge-shadow {
+            box-shadow: 0 10px 25px -5px rgba(160, 12, 12, 0.4);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Personalización de barra de scroll */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7A0909;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A00C0C;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-800 font-sans antialiased selection:bg-brand-red selection:text-white flex flex-col min-h-screen">
+
+    <!-- BARRA DE NAVEGACIÓN FIJA -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-brand-black/95 backdrop-blur-md border-b border-brand-darkRed/40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo oficial DIL PORCO -->
+                <a href="#inicio" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-brightRed rounded-lg p-1">
+                    <div id="header-logo-container" class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-gold shadow-md group-hover:scale-105 transition-transform">
+                        <img src="public/logoDILPORCO.png" alt="Logo DIL PORCO" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex flex-col">
+                        <span id="header-brand-name" class="font-serif font-bold text-xl text-brand-cream tracking-wider leading-none">DIL PORCO</span>
+                        <span class="text-[10px] text-brand-gold uppercase tracking-widest font-semibold mt-1">Carnes Frías</span>
+                    </div>
+                </a>
+
+                <!-- Menú de Navegación Escritorio -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#inicio" class="text-brand-cream hover:text-brand-gold transition-colors py-1">Inicio</a>
+                    <a href="#marca" class="text-brand-cream hover:text-brand-gold transition-colors py-1">Nuestra Marca</a>
+                    <a href="#productos" class="text-brand-cream hover:text-brand-gold transition-colors py-1">Productos</a>
+                    <a href="#ubicacion" class="text-brand-cream hover:text-brand-gold transition-colors py-1">Ubicación</a>
+                    <a href="#contacto" class="text-brand-cream hover:text-brand-gold transition-colors py-1">Contacto</a>
+                </nav>
+
+                <!-- Botones Acción Derecha -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a id="nav-wa-btn" href="https://wa.link/vxhn5s" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-xs font-bold tracking-wide flex items-center gap-2 shadow-lg hover:shadow-green-900/40 transition-all hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-base">
+                        </i>
+                        <span>Pedir por WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="flex md:hidden items-center gap-2">
+                    <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="text-brand-cream hover:text-brand-gold p-2 rounded-lg focus:outline-none" aria-label="Abrir Menú">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkGray border-b border-brand-darkRed px-4 pt-2 pb-6 space-y-3 transition-all duration-300">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block text-brand-cream hover:text-brand-gold py-2 border-b border-gray-800 text-base font-medium">Inicio</a>
+            <a href="#marca" onclick="toggleMobileMenu()" class="block text-brand-cream hover:text-brand-gold py-2 border-b border-gray-800 text-base font-medium">Nuestra Marca</a>
+            <a href="#productos" onclick="toggleMobileMenu()" class="block text-brand-cream hover:text-brand-gold py-2 border-b border-gray-800 text-base font-medium">Productos</a>
+            <a href="#ubicacion" onclick="toggleMobileMenu()" class="block text-brand-cream hover:text-brand-gold py-2 border-b border-gray-800 text-base font-medium">Ubicación</a>
+            <a href="#contacto" onclick="toggleMobileMenu()" class="block text-brand-cream hover:text-brand-gold py-2 text-base font-medium">Contacto</a>
+            <div class="pt-2">
+                <a id="mobile-wa-btn" href="https://wa.link/vxhn5s" target="_blank" rel="noopener noreferrer" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-center font-bold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Contactar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- SECCIÓN 1: INICIO (HERO) -->
+        <section id="inicio" class="relative bg-pattern min-h-[88vh] flex items-center justify-center overflow-hidden py-16">
+            <div class="absolute inset-0 hero-gradient"></div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Columna Izquierda: Mensajes Principales -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-darkRed/60 border border-brand-gold/40 text-brand-gold text-xs uppercase tracking-widest font-semibold backdrop-blur-sm">
+                        <i class="fa-solid fa-award text-sm"></i>
+                        <span>Sabor Artesanal en Cúcuta</span>
+                    </div>
+
+                    <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-brand-cream leading-tight tracking-tight">
+                        DIL PORCO: sabor y calidad en cada producto.
+                    </h1>
+
+                    <p id="hero-subtitle" class="text-lg sm:text-xl text-gray-300 max-w-2xl font-normal leading-relaxed">
+                        Conoce nuestros chorizos mixtos y nuestra longaniza de cerdo. Encuentra tus productos favoritos y contáctanos para consultar disponibilidad.
+                    </p>
+
+                    <!-- Botones Principales -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#productos" class="w-full sm:w-auto px-8 py-4 bg-brand-brightRed hover:bg-brand-red text-white font-bold rounded-xl shadow-lg hover:shadow-brand-red/50 transition-all transform hover:-translate-y-1 text-center flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span id="hero-btn-products">Ver nuestros productos</span>
+                        </a>
+
+                        <a id="hero-wa-btn" href="https://wa.link/vxhn5s" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl shadow-lg hover:shadow-green-900/50 transition-all transform hover:-translate-y-1 text-center flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span id="hero-btn-wa">Contactar por WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Datos Destacados Rápidos -->
+                    <div class="pt-8 border-t border-gray-800 grid grid-cols-3 gap-4 text-center">
+                        <div class="p-2">
+                            <p class="text-brand-gold font-bold text-2xl font-serif">100%</p>
+                            <p class="text-gray-400 text-xs">Carne Seleccionada</p>
+                        </div>
+                        <div class="p-2 border-x border-gray-800">
+                            <p class="text-brand-gold font-bold text-2xl font-serif">Cúcuta</p>
+                            <p class="text-gray-400 text-xs">Norte de Santander</p>
+                        </div>
+                        <div class="p-2">
+                            <p class="text-brand-gold font-bold text-2xl font-serif">Frescura</p>
+                            <p class="text-gray-400 text-xs">Garantizada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta Fotográfica Comercial -->
+                <div class="lg:col-span-5 relative flex justify-center z-10">
+                    <div class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-gold/30 group">
+                        <img id="hero-image" src="public/Cambio.jpg" alt="Punto de venta DIL PORCO" class="w-full h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/800x600/7A0909/FDFBF7?text=DIL+PORCO+C%C3%BAcuta';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+                            <span class="bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full w-max mb-2">Punto de Venta Oficial</span>
+                            <p class="text-white font-serif font-bold text-xl">Elaboración Tradicional</p>
+                            <p class="text-gray-300 text-xs mt-1"><i class="fa-solid fa-location-dot text-brand-gold mr-1"></i> Motilones, Cúcuta</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: NUESTRA MARCA -->
+        <section id="marca" class="py-20 bg-brand-cream border-b border-brand-warmBeige">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-brand-red font-bold text-xs uppercase tracking-widest bg-brand-lightRed px-3 py-1 rounded-full">Nuestra Historia & Compromiso</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-black mt-3">Sobre DIL PORCO</h2>
+                    <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-xl border border-gray-100 relative overflow-hidden">
+                    <div class="absolute -right-12 -bottom-12 opacity-5 text-brand-darkRed pointer-events-none">
+                        <i class="fa-solid fa-drumstick-bite text-[200px]"></i>
+                    </div>
+
+                    <div class="relative z-10 space-y-6 text-gray-700 text-lg leading-relaxed">
+                        <p id="about-text" class="text-justify font-normal text-gray-700 leading-8">
+                            DIL PORCO es una microempresa ubicada en Cúcuta, Norte de Santander, dedicada a la elaboración y comercialización de productos cárnicos. Nació con el propósito de agregar valor a la carne de cerdo mediante la elaboración de embutidos. Su portafolio incluye chorizos mixtos y longaniza de cerdo, con un compromiso orientado a la calidad de sus productos y al crecimiento de la marca.
+                        </p>
+                    </div>
+
+                    <!-- Pilares de Valor de la Marca -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 pt-8 border-t border-gray-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-lightRed flex items-center justify-center text-brand-red shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-brand-black text-base">Calidad Garantizada</h3>
+                                <p class="text-gray-500 text-sm mt-1">Selección cuidadosa de insumos cárnicos de cerdo y res.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-lightRed flex items-center justify-center text-brand-red shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-brand-black text-base">Orgullo Cucuteño</h3>
+                                <p class="text-gray-500 text-sm mt-1">Atención directa en Cúcuta y municipios cercanos.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-lightRed flex items-center justify-center text-brand-red shrink-0 text-xl font-bold">
+                                <i class="fa-solid fa-fire"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-brand-black text-base">Sabor Auténtico</h3>
+                                <p class="text-gray-500 text-sm mt-1">Empaque adecuado y sazón perfecta para la parrilla o sartén.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: CATÁLOGO DE PRODUCTOS -->
+        <section id="productos" class="py-20 bg-gray-900 text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-darkRed/80 border border-brand-gold/30 px-3 py-1 rounded-full">Catálogo Oficial</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-cream mt-3">Nuestros Productos</h2>
+                    <p class="text-gray-400 mt-2 text-base">Precios transparentes en pesos colombianos (COP). Listos para preparar.</p>
+                    <div class="w-20 h-1 bg-brand-brightRed mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Contenedor Dinámico de Productos (JS Rendered) -->
+                <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Cargando... Se inyecta desde JavaScript -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: UBICACIÓN Y CONTACTO -->
+        <section id="ubicacion" class="py-20 bg-brand-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-red font-bold text-xs uppercase tracking-widest bg-brand-lightRed px-3 py-1 rounded-full">Visítanos y Pide</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-black mt-3">Encuéntranos en Cúcuta</h2>
+                    <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    
+                    <!-- Tarjeta de Info y Mapa -->
+                    <div class="lg:col-span-6 bg-white p-8 rounded-2xl shadow-lg border border-gray-200 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-darkRed text-white flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">Dirección del Punto de Venta</h3>
+                                <p id="location-address" class="text-gray-700 font-medium mt-1">Cll 9A AV3 Motilones, Cúcuta, Norte de Santander, Colombia.</p>
+                                <p class="text-gray-500 text-xs mt-1">Atención rápida y entregas previa consulta de disponibilidad.</p>
+                            </div>
+                        </div>
+
+                        <!-- Botón Cómo Llegar -->
+                        <div>
+                            <a id="maps-link-btn" href="https://maps.app.goo.gl/4BSmRkQBJ8Ls4Eo38" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-darkRed hover:bg-brand-red text-white font-bold rounded-xl text-sm transition-colors shadow-md">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                <span>Cómo llegar en Google Maps</span>
+                            </a>
+                        </div>
+
+                        <!-- Contenedor Mapa Google Maps Iframe -->
+                        <div class="w-full h-72 rounded-xl overflow-hidden border border-gray-300 shadow-inner relative bg-gray-100">
+                            <iframe id="google-maps-iframe" 
+                                class="w-full h-full border-0" 
+                                loading="lazy" 
+                                allowfullscreen 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación DIL PORCO Cúcuta"
+                                src="https://maps.google.com/maps?q=7.9189664%2C-72.5233181&t=&z=16&ie=UTF8&iwloc=&output=embed">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto Directo por WhatsApp -->
+                    <div id="contacto" class="lg:col-span-6 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                        <h3 class="font-serif font-bold text-2xl text-brand-black mb-2">Envíanos tu Consulta</h3>
+                        <p class="text-gray-600 text-sm mb-6">Diligencia este formulario para preparar tu mensaje de WhatsApp directamente a DIL PORCO.</p>
+
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                            <div>
+                                <label for="form-name" class="block text-xs font-bold text-gray-700 uppercase mb-1">Nombre completo *</label>
+                                <input type="text" id="form-name" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition-all">
+                            </div>
+
+                            <div>
+                                <label for="form-contact" class="block text-xs font-bold text-gray-700 uppercase mb-1">Teléfono o Medio de Contacto *</label>
+                                <input type="text" id="form-contact" required placeholder="Ej. 300 123 4567" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition-all">
+                            </div>
+
+                            <div>
+                                <label for="form-product" class="block text-xs font-bold text-gray-700 uppercase mb-1">Producto de Interés</label>
+                                <select id="form-product" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition-all">
+                                    <option value="Chorizos mixtos (1 libra)">Chorizos mixtos (1 libra - $13.000 COP)</option>
+                                    <option value="Longaniza de cerdo (1 libra)">Longaniza de cerdo (1 libra - $11.000 COP)</option>
+                                    <option value="Longaniza de cerdo (1 kilo)">Longaniza de cerdo (1 kilo - $22.000 COP)</option>
+                                    <option value="Consulta General">Otra consulta general</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="form-message" class="block text-xs font-bold text-gray-700 uppercase mb-1">Mensaje o Pedido *</label>
+                                <textarea id="form-message" rows="3" required placeholder="Escribe aquí tu consulta o cantidad que requieres..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition-all"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-base">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Enviar pedido a WhatsApp</span>
+                            </button>
+
+                            <p class="text-[11px] text-gray-400 text-center mt-2">
+                                * Tus datos se utilizarán únicamente para estructurar el mensaje directo de WhatsApp. No se almacenan en servidores externos.
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer class="bg-brand-black text-gray-400 border-t border-brand-darkRed/50 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-gray-800">
+                
+                <!-- Columna 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border border-brand-gold">
+                            <img src="public/logoDILPORCO.png" alt="Logo DIL PORCO" class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-serif font-bold text-xl text-white">DIL PORCO</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Elaboración y comercialización de chorizos mixtos y longaniza de cerdo de alta calidad en Cúcuta, Norte de Santander.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">Navegación</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#inicio" class="hover:text-brand-gold transition-colors">Inicio</a></li>
+                        <li><a href="#marca" class="hover:text-brand-gold transition-colors">Nuestra Marca</a></li>
+                        <li><a href="#productos" class="hover:text-brand-gold transition-colors">Productos & Precios</a></li>
+                        <li><a href="#ubicacion" class="hover:text-brand-gold transition-colors">Ubicación</a></li>
+                        <li><a href="#contacto" class="hover:text-brand-gold transition-colors">Contacto Directo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Datos de Contacto Confirmados -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">Contacto Oficial</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-brand-gold mt-0.5"></i>
+                            <span id="footer-address">Cll 9A AV3 Motilones, Cúcuta, Colombia</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-green-500 text-sm"></i>
+                            <a id="footer-wa-link" href="https://wa.link/vxhn5s" target="_blank" class="hover:underline text-gray-300">WhatsApp DIL PORCO</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-map text-brand-gold"></i>
+                            <a id="footer-maps-link" href="https://maps.app.goo.gl/4BSmRkQBJ8Ls4Eo38" target="_blank" class="hover:underline text-gray-300">Ver Google Maps</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-8 pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 DIL PORCO. Todos los derechos reservados. Cúcuta, Norte de Santander.</p>
+                <p class="mt-2 sm:mt-0">Portafolio Digital Comercial</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // === DATOS OFICIALES DE FÁBRICA DE DIL PORCO ===
+        const DEFAULT_SITE_DATA = {
+            general: {
+                heroTitle: "DIL PORCO: sabor y calidad en cada producto.",
+                heroSubtitle: "Conoce nuestros chorizos mixtos y nuestra longaniza de cerdo. Encuentra tus productos favoritos y contáctanos para consultar disponibilidad.",
+                heroImage: "public/Cambio.jpg",
+                aboutText: "DIL PORCO es una microempresa ubicada en Cúcuta, Norte de Santander, dedicada a la elaboración y comercialización de productos cárnicos. Nació con el propósito de agregar valor a la carne de cerdo mediante la elaboración de embutidos. Su portafolio incluye chorizos mixtos y longaniza de cerdo, con un compromiso orientado a la calidad de sus productos y al crecimiento de la marca.",
+                whatsappUrl: "https://wa.link/vxhn5s",
+                mapsUrl: "https://maps.app.goo.gl/4BSmRkQBJ8Ls4Eo38",
+                address: "Cll 9A AV3 Motilones, Cúcuta, Norte de Santander, Colombia.",
+                metaTitle: "DIL PORCO | Chorizos mixtos y longaniza de cerdo en Cúcuta",
+                metaDesc: "DIL PORCO - Venta de chorizos mixtos y longaniza de cerdo de alta calidad en Cúcuta, Norte de Santander. Conoce nuestros productos y haz tu pedido por WhatsApp."
+            },
+            products: [
+                {
+                    id: "chorizos-mixtos",
+                    name: "Chorizos mixtos",
+                    type: "Producto cárnico mixto de cerdo y res",
+                    description: "Chorizos mixtos de cerdo y res, en presentación de una libra con seis unidades.",
+                    image: "public/CHORIZOS.png",
+                    presentations: [
+                        { label: "1 Libra", units: "6 unidades", price: 13000, formattedPrice: "$13.000 COP" }
+                    ],
+                    waMsg: "Hola, DIL PORCO. Quisiera consultar por los chorizos mixtos de una libra."
+                },
+                {
+                    id: "longaniza-cerdo",
+                    name: "Longaniza de cerdo",
+                    type: "Producto cárnico elaborado con carne de cerdo",
+                    description: "Longaniza de cerdo disponible en presentación de una libra o un kilo, para que elijas la cantidad que prefieras.",
+                    image: "public/LONGANIZA.png",
+                    presentations: [
+                        { label: "1 Libra", units: "5 unidades", price: 11000, formattedPrice: "$11.000 COP" },
+                        { label: "1 Kilo", units: "8 unidades", price: 22000, formattedPrice: "$22.000 COP" }
+                    ],
+                    waMsg: "Hola, DIL PORCO. Quisiera consultar por la longaniza de cerdo."
+                }
+            ]
+        };
+
+        // Estado global activo de la app
+        let currentData = JSON.parse(JSON.stringify(DEFAULT_SITE_DATA));
+
+        window.addEventListener('DOMContentLoaded', renderAppContent);
+
+        // Renderizar todo el sitio basado en el estado `currentData`
+        function renderAppContent() {
+            const g = currentData.general;
+
+            // Metadatos
+            document.getElementById('meta-title').innerText = g.metaTitle;
+            document.getElementById('meta-desc').setAttribute('content', g.metaDesc);
+
+            // Hero
+            document.getElementById('hero-title').innerText = g.heroTitle;
+            document.getElementById('hero-subtitle').innerText = g.heroSubtitle;
+            document.getElementById('hero-image').src = g.heroImage;
+
+            // Enlaces WhatsApp
+            const waBtns = ['nav-wa-btn', 'mobile-wa-btn', 'hero-wa-btn', 'footer-wa-link'];
+            waBtns.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.href = g.whatsappUrl;
+            });
+
+            // Enlaces Maps y Dirección
+            document.getElementById('location-address').innerText = g.address;
+            document.getElementById('footer-address').innerText = g.address;
+            document.getElementById('maps-link-btn').href = g.mapsUrl;
+            document.getElementById('footer-maps-link').href = g.mapsUrl;
+
+            // Texto Marca
+            document.getElementById('about-text').innerText = g.aboutText;
+
+            // Renderizado de Catálogo de Productos
+            renderProductsCatalog();
+        }
+
+        function renderProductsCatalog() {
+            const container = document.getElementById('products-container');
+            container.innerHTML = '';
+
+            currentData.products.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-brand-darkGray rounded-2xl overflow-hidden border border-gray-800 shadow-2xl flex flex-col justify-between group hover:border-brand-gold/50 transition-all duration-300";
+
+                let presentationsHTML = '';
+                p.presentations.forEach(pres => {
+                    presentationsHTML += `
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-black/40 border border-gray-800">
+                            <div>
+                                <span class="text-white font-bold text-sm block">${pres.label}</span>
+                                <span class="text-gray-400 text-xs"><i class="fa-solid fa-box-open text-brand-gold mr-1"></i> ${pres.units}</span>
+                            </div>
+                            <span class="text-brand-gold font-serif font-bold text-lg">${pres.formattedPrice || '$' + pres.price.toLocaleString('es-CO') + ' COP'}</span>
+                        </div>
+                    `;
+                });
+
+                // Construcción de link específico de WA
+                const encodedMsg = encodeURIComponent(p.waMsg || `Hola, DIL PORCO. Quisiera consultar por ${p.name}.`);
+                const productWaUrl = `${currentData.general.whatsappUrl}?text=${encodedMsg}`;
+
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-64 overflow-hidden bg-gray-900">
+                            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/800x600/7A0909/FDFBF7?text=${encodeURIComponent(p.name)}';">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-brand-red text-white text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded-full shadow">
+                                    ${p.type}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-6 sm:p-8 space-y-4">
+                            <h3 class="text-2xl font-serif font-bold text-white group-hover:text-brand-cream transition-colors">${p.name}</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed">${p.description}</p>
+                            
+                            <div class="space-y-2 pt-2">
+                                <p class="text-xs uppercase tracking-wider text-gray-400 font-bold">Presentaciones & Precios:</p>
+                                ${presentationsHTML}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-8 pt-0">
+                        <a href="${productWaUrl}" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-lg transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Consultar por WhatsApp</span>
+                        </a>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Manejo del envío del Formulario de Contacto -> Redirección a WA
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const contact = document.getElementById('form-contact').value;
+            const product = document.getElementById('form-product').value;
+            const message = document.getElementById('form-message').value;
+
+            const structuredText = `Hola, DIL PORCO.
+Me comunico desde el portafolio web.
+*Nombre:* ${name}
+*Contacto:* ${contact}
+*Producto de interés:* ${product}
+*Mensaje:* ${message}`;
+
+            const waLink = `${currentData.general.whatsappUrl}?text=${encodeURIComponent(structuredText)}`;
+            window.open(waLink, '_blank');
+        }
+
+        // Toggle del Menú Móvil
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+    </script>
+</body>
+</html>
